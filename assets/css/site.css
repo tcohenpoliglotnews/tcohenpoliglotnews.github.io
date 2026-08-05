@@ -44,6 +44,10 @@ body {
   color: var(--ink);
   line-height: 1.65;
   font-size: 17px;
+  /* keep the footer at the bottom on short pages */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 a { color: var(--accent-ink); }
@@ -113,6 +117,8 @@ main {
   max-width: var(--maxw);
   margin: 0 auto;
   padding: 0 24px;
+  width: 100%;
+  flex: 1 0 auto;
 }
 
 .wrap { max-width: var(--textw); }
@@ -214,6 +220,36 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 34px 0; }
 }
 
 .btn-quiet:hover { background: var(--surface); color: var(--ink); }
+
+/* minimal landing block (homepage) */
+.landing {
+  padding: 104px 0 118px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-bottom: 0;
+}
+
+.landing .app-icon {
+  width: 128px;
+  height: 128px;
+  border-radius: 29px;
+  border: 1px solid var(--border);
+  margin-bottom: 28px;
+}
+
+.landing h1 {
+  font-size: clamp(2.4rem, 6vw, 3.4rem);
+  margin-bottom: 16px;
+}
+
+.landing .badge { margin-bottom: 32px; }
+
+@media (max-width: 640px) {
+  .landing { padding: 64px 0 76px; }
+  .landing .app-icon { width: 104px; height: 104px; border-radius: 24px; }
+}
 
 /* product intro: icon beside text */
 .product-head {
