@@ -1,0 +1,4 @@
+# Authorized sellers of Poliglot News LLC app inventory (IAB Tech Lab app-ads.txt).
+# Google crawls this file at the developer website listed on the App Store page,
+# and refuses to fill most programmatic demand until it finds the line below.
+google.com, pub-7669361431004120, DIRECT, f08c47fec0942fa0
